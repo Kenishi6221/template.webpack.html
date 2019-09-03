@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vainilla JS carousel</title>
+    {{# each htmlWebpackPlugin.files.css }}
+    <link async rel="stylesheet" as="style" href="{{ this }}">
+    {{/ each }}
+    {{# each htmlWebpackPlugin.files.extracted.css }}
+    <link async rel="subresource" as="style" href="{{ this.file }}" onload="this.rel='stylesheet'"
+        media="{{ this.query }}">
+    {{/ each }}
+</head>
+
+<body>
+    <div class="carousel">
+        <button class="carousel__button carousel__button--left"><span>&lt;</span> </button>
+        <div class="carousel__track-container">
+            <ul class="carousel__track">
+                <li class="carousel__slide">
+                    <img class="carousel__image" src="./assets/images/image-1.jpg" alt="firt image">
+                </li>
+                <li class="carousel__slide">
+                    <img class="carousel__image" src="./assets/images/image-2.jpeg" alt="second image">
+                </li>
+                <li class="carousel__slide">
+                    <img class="carousel__image" src="./assets/images/image-3.jpeg" alt="third image">
+                </li>
+            </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">&gt;</button>
+        <div class="carousel__nav">
+            <button class="carousel__indicator current_slide"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+        </div>
+    </div>
+    {{# each htmlWebpackPlugin.files.js }}
+    <script defer src="{{ this }}"></script>
+    {{/ each}}
+    {{# each htmlWebpackPlugin.files.extracted.js }}
+    <script defer src="{{ this.file }}"></script>
+    {{/ each}}
+</body>
+
+</html>
