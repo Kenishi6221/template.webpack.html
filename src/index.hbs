@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vainilla JS carousel</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     {{# each htmlWebpackPlugin.files.css }}
     <link async rel="stylesheet" as="style" href="{{ this }}">
     {{/ each }}
@@ -16,26 +17,20 @@
 </head>
 
 <body>
-    <div class="carousel">
-        <button class="carousel__button carousel__button--left"><span>&lt;</span> </button>
-        <div class="carousel__track-container">
-            <ul class="carousel__track">
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-1.jpg" alt="firt image">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-2.jpeg" alt="second image">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-3.jpeg" alt="third image">
-                </li>
-            </ul>
-        </div>
-        <button class="carousel__button carousel__button--right">&gt;</button>
-        <div class="carousel__nav">
-            <button class="carousel__indicator current_slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+    <div class="login">
+        <div class="login__box">
+            <span class="login_title">Login</span>
+            <form autocomplete="off">
+                <div class="login_inputBox">
+                    <input class="login__input" id="userName" type="text" required>
+                    <label class="login__label" for="userName">Username</label>
+                </div>
+                <div class="login_inputBox">
+                    <input class="login__input" id="password" type="password" required>
+                    <label class="login__label" for="password">Password</label>
+                </div>
+                <input class="login__submit" type="submit">
+            </form>
         </div>
     </div>
     {{# each htmlWebpackPlugin.files.js }}

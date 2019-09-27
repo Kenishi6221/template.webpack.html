@@ -8,7 +8,6 @@ const webpackConfiguration = merge(common, {
         publicPath: '/',
     },
     devServer: {
-        host: '0.0.0.0',
         compress: true,
         inline: true,
     },

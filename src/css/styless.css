@@ -1,72 +1,79 @@
-.carousel{
-    height: 600px;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-}
-
-.carousel__image{
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
-}
-
-.carousel__track-container{
-    background-color: lightgreen;
-    height: 100%;
-    position: relative;
-}
-
-.carousel__track{
-    padding: 0;
+body{
+    height: 100vh;
     margin: 0;
-    list-style: none;
+    padding: 0;
 }
 
- .carousel__slide{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    width: 100%;
+.login{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-image: url('/src/assets/images/web.jpg');
+    background-size: cover;
+    align-items: center;
+    justify-items: center;
 }
 
-.carousel__button{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    border:none;
-    background: transparent;
-    cursor: pointer;
+.login__box{
+    display: grid;
+    align-items: center;
+    padding: 4rem;
+    background: rgba(0,0,0,0.8);
+    width: 50%;
+    border-radius: 10px;
 }
 
-.carousel__button--left{
-    left:-7%;
+.login_title{
+    color:white;
     font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.carousel__button--right{
-    right: -7%;
-font-size: 2rem;
+.login_inputBox{
+    margin-bottom: 2rem;
 }
 
-.carousel__nav{
-    background-color: pink;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+.login__input{
+    background-color:transparent;
+    outline: none;
+    border:none;
+    border-bottom: 1px #ccc solid;
+    width: 100%;
+    color:white;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
-.carousel__indicator{
-    border:0;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background-color:rgba(0,0,0,.3);
-    margin:0.5rem;
+.login__label{
+    display: block;
+    color:white;
+    transform: translateY(-2.0rem);
+    width: 100%;
+    transition: 0.5s;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
-.carousel__indicator.current_slide{
-background-color: rgba(0,0,0,.7);
+.login__submit{
+    border-radius: .5rem;
+    padding: .75rem 1.5rem;
+    background-color:#03a9f4;
+    cursor:pointer;
+    border: none;
+    color:white;
+}
+
+.login__input:focus ~ label,
+.login__input:valid ~ label
+{
+    transform: translateY(-3rem);
+    font-size: .8rem;
+    color: #03a9f4;
+}
+
+.login__input:required {
+    box-shadow:none;
 }
