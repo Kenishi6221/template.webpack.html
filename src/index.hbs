@@ -16,28 +16,11 @@
 </head>
 
 <body>
-    <div class="carousel">
-        <button class="carousel__button carousel__button--left"><span>&lt;</span> </button>
-        <div class="carousel__track-container">
-            <ul class="carousel__track">
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-1.jpg" alt="firt image">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-2.jpeg" alt="second image">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-3.jpeg" alt="third image">
-                </li>
-            </ul>
-        </div>
-        <button class="carousel__button carousel__button--right">&gt;</button>
-        <div class="carousel__nav">
-            <button class="carousel__indicator current_slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-        </div>
-    </div>
+
+
+    <span class="example-style">
+        Hellow world from template html
+    </span>
     {{# each htmlWebpackPlugin.files.js }}
     <script defer src="{{ this }}"></script>
     {{/ each}}
