@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vainilla JS carousel</title>
+    <title>Vainilla JS slider</title>
     {{# each htmlWebpackPlugin.files.css }}
     <link async rel="stylesheet" as="style" href="{{ this }}">
     {{/ each }}
@@ -16,27 +16,14 @@
 </head>
 
 <body>
-    <div class="carousel">
-        <button class="carousel__button carousel__button--left"><span>&lt;</span> </button>
-        <div class="carousel__track-container">
-            <ul class="carousel__track">
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-1.jpg" alt="firt image">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-2.jpeg" alt="second image">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./assets/images/image-3.jpeg" alt="third image">
-                </li>
-            </ul>
-        </div>
-        <button class="carousel__button carousel__button--right">&gt;</button>
-        <div class="carousel__nav">
-            <button class="carousel__indicator current_slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-        </div>
+    <div class="slider">
+        <figure class="slider__track-container">
+            <img class="slider__image" src="./assets/images/desk.png" alt="firt image">
+            <img class="slider__image" src="./assets/images/desk2.png" alt="second image">
+            <img class="slider__image" src="./assets/images/desk.png" alt="third image">
+            <img class="slider__image" src="./assets/images/desk3.png" alt="third image">
+            <img class="slider__image" src="./assets/images/desk.png" alt="third image">
+        </figure>
     </div>
     {{# each htmlWebpackPlugin.files.js }}
     <script defer src="{{ this }}"></script>
